@@ -14,6 +14,12 @@
 		234FCE3822FA01CD000F7B9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 234FCE3622FA01CD000F7B9D /* LaunchScreen.storyboard */; };
 		234FCE4322FA01CD000F7B9D /* Sorting_AlgsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234FCE4222FA01CD000F7B9D /* Sorting_AlgsTests.swift */; };
 		234FCE4E22FA01CD000F7B9D /* Sorting_AlgsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234FCE4D22FA01CD000F7B9D /* Sorting_AlgsUITests.swift */; };
+		234FCE5C22FF5A32000F7B9D /* gifFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234FCE5B22FF5A32000F7B9D /* gifFrame.swift */; };
+		234FCE5E22FF5DBC000F7B9D /* bsInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234FCE5D22FF5DBC000F7B9D /* bsInfoViewController.swift */; };
+		234FCE6222FF920F000F7B9D /* InsertionSortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234FCE6122FF920F000F7B9D /* InsertionSortViewController.swift */; };
+		234FCE6422FF9279000F7B9D /* isInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234FCE6322FF9278000F7B9D /* isInfoViewController.swift */; };
+		23905A102304C45C00A1689B /* MergeSortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23905A0F2304C45C00A1689B /* MergeSortViewController.swift */; };
+		23B92D3B230DFBD100B78531 /* msInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B92D3A230DFBD100B78531 /* msInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		234FCE4922FA01CD000F7B9D /* Sorting AlgsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sorting AlgsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		234FCE4D22FA01CD000F7B9D /* Sorting_AlgsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorting_AlgsUITests.swift; sourceTree = "<group>"; };
 		234FCE4F22FA01CD000F7B9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		234FCE5B22FF5A32000F7B9D /* gifFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gifFrame.swift; sourceTree = "<group>"; };
+		234FCE5D22FF5DBC000F7B9D /* bsInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bsInfoViewController.swift; sourceTree = "<group>"; };
+		234FCE6122FF920F000F7B9D /* InsertionSortViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionSortViewController.swift; sourceTree = "<group>"; };
+		234FCE6322FF9278000F7B9D /* isInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isInfoViewController.swift; sourceTree = "<group>"; };
+		23905A0F2304C45C00A1689B /* MergeSortViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSortViewController.swift; sourceTree = "<group>"; };
+		23B92D3A230DFBD100B78531 /* msInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = msInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +111,13 @@
 			children = (
 				234FCE2D22FA01C8000F7B9D /* AppDelegate.swift */,
 				234FCE2F22FA01C8000F7B9D /* ViewController.swift */,
+				23905A0F2304C45C00A1689B /* MergeSortViewController.swift */,
+				234FCE5D22FF5DBC000F7B9D /* bsInfoViewController.swift */,
 				234FCE3122FA01C8000F7B9D /* Main.storyboard */,
+				23B92D3A230DFBD100B78531 /* msInfoViewController.swift */,
+				234FCE6322FF9278000F7B9D /* isInfoViewController.swift */,
+				234FCE6122FF920F000F7B9D /* InsertionSortViewController.swift */,
+				234FCE5B22FF5A32000F7B9D /* gifFrame.swift */,
 				234FCE3422FA01CD000F7B9D /* Assets.xcassets */,
 				234FCE3622FA01CD000F7B9D /* LaunchScreen.storyboard */,
 				234FCE3922FA01CD000F7B9D /* Info.plist */,
@@ -256,6 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23B92D3B230DFBD100B78531 /* msInfoViewController.swift in Sources */,
+				234FCE6422FF9279000F7B9D /* isInfoViewController.swift in Sources */,
+				234FCE5C22FF5A32000F7B9D /* gifFrame.swift in Sources */,
+				23905A102304C45C00A1689B /* MergeSortViewController.swift in Sources */,
+				234FCE5E22FF5DBC000F7B9D /* bsInfoViewController.swift in Sources */,
+				234FCE6222FF920F000F7B9D /* InsertionSortViewController.swift in Sources */,
 				234FCE3022FA01C8000F7B9D /* ViewController.swift in Sources */,
 				234FCE2E22FA01C8000F7B9D /* AppDelegate.swift in Sources */,
 			);

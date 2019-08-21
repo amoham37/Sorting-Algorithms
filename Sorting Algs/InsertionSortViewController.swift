@@ -1,16 +1,15 @@
 //
-//  ViewController.swift
+//  InsertionSortViewController.swift
 //  Sorting Algs
 //
-//  Created by Ahmet Mohammed on 8/6/19.
+//  Created by Ahmet Mohammed on 8/10/19.
 //  Copyright © 2019 Ahmet. All rights reserved.
 //
 
 import UIKit
 
-
-
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
+class InsertionSortViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return steps.count
@@ -31,75 +30,77 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     
-    @IBOutlet weak var userArr: UITextField!
+    
+    
+    @IBAction func sortBtn(_ sender: UIButton) {
+        let strings2 = textView.text
+        
+        steps = []
+        
+        let arrayIntegers2 = strings2?.components(separatedBy: " ").compactMap { Int($0) }
+    
+        insertionSort(arrayIntegers2 ?? [1])
+    }
+    
+    
+    @IBOutlet weak var textView: UITextField!
     
     @IBOutlet weak var tableView: UITableView!
     
-    @IBAction func sortBtn(_ sender: UIButton) {
-        
-        let strings = userArr.text
-        
-        steps = []
-    
-        let arrayIntegers = strings?.components(separatedBy: " ").compactMap { Int($0) }
-        
-        bubbleSort(arrayIntegers ?? [1], <)
-    
-    }
-    
+   
     func textField(_ textView: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        
+      
         let allowedChars = CharacterSet(charactersIn: "1234567890 ")
         let characterSet = CharacterSet(charactersIn: string)
         return allowedChars.isSuperset(of: characterSet)
     }
     
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.dataSource = self
         tableView.delegate = self
-        userArr.delegate = self 
+        textView.delegate = self
+        // Do any additional setup after loading the view.
     }
     
-    
-    
-   public func bubbleSort<T> (_ arrays: [T], _ comparison: (T,T) -> Bool) -> [T]  {
-        var array = arrays
-    
-        for i in 0..<array.count {
-            for j in 1..<array.count-i {
-                if comparison(array[j], array[j-1]) {
-                    let tmp = array[j-1]
-                    array[j-1] = array[j]
-                    array[j] = tmp
-                    steps.append("\(array)")
-//                    print(array) // prints the array after each iteration to the console
-                   
-                }
+    func insertionSort<T: Comparable>(_ array: [T]) -> [T] {
+        guard array.count > 1 else { return array }
+        
+        var a = array
+        for x in 1..<a.count {
+            var y = x
+            let temp = a[y]
+            while y > 0 && temp < a[y - 1] {
+                a[y] = a[y - 1]
+                y -= 1
             }
+            a[y] = temp
+            steps.append("\(a)")
+            print(a)
+
         }
-        return array
+        return a
     }
     
-    public func bubbleSort<T> (_ elements: [T]) -> [T] where T: Comparable {
-        return bubbleSort(elements, <)
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
-}
+    */
 
-func userArr(_ textView: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
     
-    
-    let allowedChars = CharacterSet(charactersIn: "1234567890 ")
-    let characterSet = CharacterSet(charactersIn: string)
-    return allowedChars.isSuperset(of: characterSet)
 }
 
 
-@IBDesignable class srtBtn: UIButton
+@IBDesignable class sortBtn: UIButton
 {
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -119,16 +120,16 @@ func userArr(_ textView: UITextField, shouldChangeCharactersIn range: NSRange, r
 }
 
 extension StringProtocol  {
-    var arrayIntegers: [Int] {
+    var arrayIntegers2: [Int] {
         
         return compactMap{ $0.wholeNumberValue }
     }
 }
 
 extension LosslessStringConvertible {
-    var strings: String { return String(self) }
+    var strings2: String { return String(self) }
 }
 
 extension Numeric where Self: LosslessStringConvertible {
-    var arrayIntegers: [Int] { return strings.arrayIntegers }
+    var arrayIntegers2: [Int] { return strings2.arrayIntegers2 }
 }
